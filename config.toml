@@ -1,23 +1,42 @@
-# Choose one variant and leave its parameters uncommented.
+# Choose one role and uncomment only that role's settings.
+# Keep the other role fully commented out.
 
 # ===== CLIENT =====
+# Starts the transport in client mode.
 # role = "client"
+# UDP address where 1kbit receives datagrams from notssh.
 # local_input_addr = "127.0.0.1:42002"
+# UDP address where 1kbit sends datagrams back to notssh.
 # local_output_addr = "127.0.0.1:42001"
+# UDP address where 1kbit listens for traffic from the remote 1kbit instance.
 # network_listen_addr = "0.0.0.0:43000"
+# Address of the remote 1kbit transport instance.
 # peer_addr = "192.168.1.1:43000"
+# Enables or disables the outgoing bandwidth limit.
 # rate_limit_enabled = true
+# Maximum outgoing rate in bits per second when limiting is enabled.
 # rate_bits_per_second = 1000
+# Maximum UDP datagram size produced by the transport.
 # max_datagram = 1200
+# Maximum number of datagrams waiting in the rate-limit queue.
 # queue_capacity = 16
 
 # ===== SERVER =====
+# Starts the transport in server mode.
 # role = "server"
+# UDP address where 1kbit receives datagrams from notssh.
 # local_input_addr = "127.0.0.1:42004"
+# UDP address where 1kbit sends datagrams back to notssh.
 # local_output_addr = "127.0.0.1:42003"
+# UDP address where 1kbit listens for traffic from the remote 1kbit instance.
 # network_listen_addr = "0.0.0.0:43000"
+# Leave empty when the server learns the client's UDP address.
 # peer_addr = ""
+# Enables or disables the outgoing bandwidth limit.
 # rate_limit_enabled = true
+# Maximum outgoing rate in bits per second when limiting is enabled.
 # rate_bits_per_second = 1000
+# Maximum UDP datagram size produced by the transport.
 # max_datagram = 1200
+# Maximum number of datagrams waiting in the rate-limit queue.
 # queue_capacity = 16
